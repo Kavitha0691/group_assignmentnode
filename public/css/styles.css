@@ -1,0 +1,42 @@
+:root {
+    --header-color: #021C0D;
+    --font-color:   #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+   
+.header {
+    background-color: var(--header-color);
+}
+
+.header__image {
+    position: absolute;
+    left: 0;
+}
+
+.header__title-container {
+    display:flex;
+    color: var(--font-color);
+    justify-content: center;
+    align-items: center;  
+}  
+
+@media screen and (max-width: 768px) {
+    .header {
+        display : flex;
+        align-items: center;
+    }
+
+    .header__title-container {
+        display: flex;
+        text-align: center;
+        margin:auto;
+    }
+}
