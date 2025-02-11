@@ -117,4 +117,8 @@ only the reptiles.
 
 import { reptiles } from "./data/animals.js";
 
+You can also pick 2 different animal-arrays by:
+
+import { repiles, birds } from "./data/animals.js";
+
 */
