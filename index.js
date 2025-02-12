@@ -1,4 +1,5 @@
 import express from 'express';
+import birdsRouter from './routes/birds.js';
 import * as path from 'path';
 
 const __dirname = path.resolve();
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 //Routing Here
-
+app.use("/birds",birdsRouter);
 
 //Setup
 app.set("view engine", "ejs");
