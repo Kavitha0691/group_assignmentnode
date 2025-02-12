@@ -1,6 +1,7 @@
 html .sidebar {
   padding: 20px;
-  background-color: #901111;
+  background-color: #021c0d;
+  color: #fff;
   height: 100vh;
   max-width: fit-content;
 }
