@@ -1,5 +1,6 @@
 import express from 'express';
 import * as path from 'path';
+import mammalsRouter from './routes/mammals.js';
 
 const __dirname = path.resolve();
 const PORT = 3030;
@@ -13,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 //Routing Here
-
+app.use("/mammals", mammalsRouter)
 
 //Setup
 app.set("view engine", "ejs");
