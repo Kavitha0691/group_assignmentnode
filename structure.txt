@@ -1,0 +1,37 @@
+Team Zoo Node Assignment
+|____Data
+|         |_animals-object.js
+|
+├── public
+│   ├── images
+│   └── css
+│       └── styles.css
+├── routes
+│   ├── mammals .js
+│   └── Birds.js
+|    |___Riptiles.js
+├── views
+|   |
+│   ├── pages
+│   │   ├── home.ejs
+│   │   ├── featurepage.ejs
+│   │
+|   |
+|   |── partials
+│   │   ├── header.ejs
+│   │   |__ menu.ejs
+|   |    |__ head.ejs
+|   |    |__ Introduction.ejs
+|   |    |__sidebar.ejs
+|   |    |__nav.ejs
+|   |    |── footer.ejs
+|   |
+|   |
+|   |
+|   |
+|   |
+|   |
+|   |
+├── index.js
+└── package.json
+|__ .gitignore
