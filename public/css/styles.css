@@ -11,7 +11,7 @@ body {
     height: 100vh;
     margin: 0;
 }
-   
+
 .header {
     background-color: var(--header-color);
 }
@@ -25,8 +25,8 @@ body {
     display:flex;
     color: var(--font-color);
     justify-content: center;
-    align-items: center;  
-}  
+    align-items: center;
+}
 
 @media screen and (max-width: 768px) {
     .header {
@@ -67,7 +67,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .navigation-container {
-        flex-direction: row; 
+        flex-direction: row;
         align-items: center;
         padding: 10px;
     }
