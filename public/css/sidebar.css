@@ -1,0 +1,24 @@
+html .sidebar {
+  padding: 20px;
+  background-color: #021c0d;
+  color: #fff;
+  height: 100vh;
+  max-width: fit-content;
+}
+
+.sidebar-btn {
+  display: block;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: black;
+}
+
+.sidebar-btn:hover {
+  background-color: #e9e9e9;
+}

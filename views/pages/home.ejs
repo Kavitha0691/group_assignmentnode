@@ -2,15 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head', {title: 'Home'}) %>
+ 
 <body>
     <div class="flex-container">
-            
+        <%- include('../partials/header') %>
+        <%- include("../partials/navigation.ejs") %>
+           
         <main class="main-content">
-            <div class="content-wrapper"></div>
+            <%- include('../partials/sidebar', {allAnimals: allAnimals}) %>
+            <div class="content-wrapper">
             <h1>Welcome to the Animal Page</h1>
             <p>Discover amazing animals and their habitats.</p>
+        </div>
         </main>
     </div>
 
 </body>
 </html>
+
