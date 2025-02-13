@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <%- include('../partials/head', {title: 'Home'}) %>
-  <%- include('../partials/sidebar', {allAnimals: allAnimals}) %>
   <body>
     <%- include('../partials/header') %>
     <%- include("../partials/navigation.ejs") %>
+    <main>
+        <%- include('../partials/sidebar', {allAnimals: allAnimals}) %>
+    </main>
   </body>
 </html>
