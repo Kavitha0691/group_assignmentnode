@@ -1,0 +1,9 @@
+<div class="sidebar">
+  <% allAnimals?.forEach(animal => { %>
+    <a href="#<%= animal.name || "" %>" class="sidebar-btn">
+      <%= animal.name || "no name" %>
+    </a>
+  <% }); %>
+</div>
+
+
