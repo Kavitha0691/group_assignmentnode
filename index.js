@@ -1,9 +1,12 @@
+import dotenv from "dotenv";
 import express from "express";
 import * as path from "path";
 import { allAnimals } from "./data/animals.js";
 
+dotenv.config();
+
 const __dirname = path.resolve();
-const PORT = 3030;
+const PORT = process.env.PORT || 3030;
 const app = express();
 
 //Home site, landing page.
