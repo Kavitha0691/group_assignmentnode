@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import express from "express";
 import * as path from "path";
 import { allAnimals } from "./data/animals.js";
+=======
+import express from 'express';
+import birdsRouter from './routes/birds.js';
+import * as path from 'path';
+>>>>>>> feature/birdsupdated-12
 
 const __dirname = path.resolve();
 const PORT = 3030;
@@ -13,6 +19,10 @@ app.get("/", (req, res) => {
   });
 });
 //Routing Here
+<<<<<<< HEAD
+=======
+app.use("/birds",birdsRouter);
+>>>>>>> feature/birdsupdated-12
 
 //Setup
 app.set("view engine", "ejs");
