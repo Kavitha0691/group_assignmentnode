@@ -40,3 +40,56 @@ body {
         margin:auto;
     }
 }
+
+.navigation-container  {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding: 10px;
+    margin: 15px;
+    justify-content: space-around;
+    background-color: #021C0D;
+}
+
+.nav-link {
+    display: flex;
+    font-size: 26px;
+    background-color: #021C0D;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #06602b;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation-container {
+        flex-direction: row; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-link {
+        font-size: 30px;
+        padding: 12px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navigation-container {
+        margin: 10px;
+        padding: 8px;
+    }
+
+    .nav-link {
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+
