@@ -1,5 +1,4 @@
 node_modules
 package-lock.json
 .env
-*.net
-._DS_Store
+*.net.*
