@@ -66,6 +66,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .navigation-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
   .navigation-container {
     flex-direction: row;
     align-items: center;
