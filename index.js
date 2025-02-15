@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 import express from "express";
 import * as path from "path";
+import reptilesRouter from "./routes/reptiles.js";
 import { allAnimals } from "./data/animals.js";
 
 dotenv.config();
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
   });
 });
 //Routing Here
-
+app.use ("/reptiles", reptilesRouter);
 //Setup
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
