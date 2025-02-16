@@ -9,15 +9,17 @@ birdsRouter.get("/", (req, res) => {
     headTitle: "Group-AssignmentNode",
     title: "Birds",
     typePage: "home",
-    animalData: birds,
+    description: "Birds are a group of animals that are found in the sky. They are a type of animal that can fly. They are a type of animal that can fly. They are a type of animal that can fly.",
+    animals: birds,
   });
 });
 
 birds.forEach((bird) => {
-  birdsRouter.get(`/${bird.name.trim().toLowerCase()}`, (req, res) => {
+  birdsRouter.get(`/${bird.slug}`, (req, res) => {
     res.render("pages/animal-page", {
       headTitle: bird.name,
       title: bird.name,
+      animals: birds,
       animalData: bird,
     });
   });

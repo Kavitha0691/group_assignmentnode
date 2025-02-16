@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head', {title: headTitle}) %>
+  <body>
+    <!-- header -->
+    <%- include('../partials/header') %>
+    <!-- navigation -->
+    <%- include("../partials/navigation.ejs") %>
+    <div class="main-container">
+      <%- include('../partials/sidebar', {allAnimals:animals}) %>
+      <main>
+        <h1><%= locals.title || "no title" %></h1>
+        <p><%= locals.description || "" %></p>
+        <% if (locals.animalData) { %>
+        <img
+          src="/images/<%= animalData.slug %>.jpg"
+          alt="<%= animalData.name %>"
+        />
+        <ul>
+          <li><b>Description:</b> <%= animalData.description || "no description" %></li>
+          <li><b>Weight:</b> <%= animalData.weight || "no weight" %></li>
+          <li><b>Length:</b> <%= animalData.length || "no length" %></li>
+          <li><b>Food:</b> <%= animalData.food || "no food" %></li>
+          <li><b>Lifespan:</b> <%= animalData.lifespan || "no lifespan" %></li>
+          <li><b>Found:</b> <%= animalData.found || "no found" %></li>
+        </ul>
+        <% } %>
+      </main>
+    </div>
+    <%- include('../partials/footer') %>
+  </body>
+</html>

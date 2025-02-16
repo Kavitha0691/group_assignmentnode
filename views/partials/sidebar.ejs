@@ -1,9 +1,13 @@
-<div class="sidebar">
-  <% allAnimals?.forEach(animal => { %>
-    <a href="#<%= animal.name || "" %>" class="sidebar-btn">
-      <%= animal.name || "no name" %>
-    </a>
-  <% }); %>
-</div>
-
-
+<aside class="sidebar">
+  <% if (allAnimals && allAnimals.length > 0) { %>
+    <% allAnimals.forEach(animal => {
+      const href = `/${animal.group.toLowerCase()}/${animal.slug}`;
+      %>
+      <a href='<%= href %>' class="sidebar-btn" data-animal-details="<%= JSON.stringify(animal) %>">
+        <%= animal.name %>
+      </a>
+    <% }) %>
+  <% } else { %>
+    <p>No animals found</p>
+  <% } %>
+</aside>

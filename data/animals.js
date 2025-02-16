@@ -1,6 +1,7 @@
 class Animal {
     constructor(name, weight, length, description, food, lifespan, found, group) {
         this.name = name;
+        this.slug = name.trim().toLowerCase().replace(/\s+/g, '-')
         this.weight = weight;
         this.length = length;
         this.description = description;
@@ -46,7 +47,7 @@ const birds = [new Animal('Cassowary',
     "Plants matter like fruit, insects and small animals like mice amd lizards",
     "20 years",
     "Queensland",
-    "Bird"
+    "Birds"
 ),
 new Animal('Kookaburra',
     "300g",
@@ -55,7 +56,7 @@ new Animal('Kookaburra',
     "Insects and smalll animals including snakes, frogs and lizards",
     "20 years",
     "Australia wide",
-    "Bird"
+    "Birds"
 ),
 new Animal('Yellow Tailed Black Cockatoo',
     "900g",
@@ -64,7 +65,7 @@ new Animal('Yellow Tailed Black Cockatoo',
     "Fruit, seeds and other plant material",
     "41 years",
     "SE Australia",
-    "Bird"
+    "Birds"
 )]
 
 const reptiles = [new Animal('Frill-necked Lizard',
@@ -105,7 +106,7 @@ if you want to import all animals in a script, you import like this at the top:
 
 import { allAnimals } from "./data/animals.js";
 
-only the birds: 
+only the birds:
 
 import { birds } from "./data/animals.js";
 
