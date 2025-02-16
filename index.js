@@ -1,6 +1,6 @@
+import express from 'express';
+import * as path from 'path';
 import dotenv from "dotenv";
-import express from "express";
-import * as path from "path";
 import { allAnimals } from "./data/animals.js";
 import birdsRouter from './routes/birds.js';
 
