@@ -2,6 +2,7 @@ import express from 'express';
 import birdsRouter from './routes/birds.js';
 import * as path from 'path';
 import dotenv from "dotenv";
+import reptilesRouter from "./routes/reptiles.js";
 import { allAnimals } from "./data/animals.js";
 
 dotenv.config();
@@ -17,7 +18,11 @@ app.get("/", (req, res) => {
   });
 });
 //Routing Here
+
+app.use ("/reptiles", reptilesRouter);
+
 app.use("/birds",birdsRouter);
+
 
 //Setup
 app.set("view engine", "ejs");
