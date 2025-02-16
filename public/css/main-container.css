@@ -87,3 +87,10 @@
     padding: 0.5rem;
   }
 }
+
+.animal-group-btn {
+  background-color: #021c0d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

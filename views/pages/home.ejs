@@ -4,8 +4,32 @@
   <body>
     <%- include('../partials/header') %>
     <%- include("../partials/navigation.ejs") %>
-    <main>
-        <%- include('../partials/sidebar', {allAnimals: allAnimals}) %>
-    </main>
+    <div class="main-container">
+      <%- include('../partials/sidebar', {allAnimals: allAnimals}) %>
+      <main>
+        <h1>Welcome to the Animal Page</h1>
+        <p>Discover amazing animals and their habitats.</p>
+        <div class="animal-details"></div>
+      </main>
+    </div>
+    <script>
+      const sidebarBtns = document.querySelectorAll('.sidebar-btn');
+      sidebarBtns.forEach(btn => {
+        btn.addEventListener('click', (event) => {
+          event.preventDefault();
+          const animalDetailsJson = event.target.dataset.animalDetails;
+          const animalDetails = JSON.parse(animalDetailsJson);
+
+          const animalDetailsDiv = document.querySelector('.animal-details');
+
+          animalDetailsDiv.innerHTML = `
+            <h2>${animalDetails.name}</h2>
+            <p>${animalDetails.description.slice(0, 350)}...</p>
+            <br>
+            <a href="${animalDetails.group.toLowerCase()}" class="animal-group-btn">Read more about ${animalDetails.group}</a>
+          `;
+        });
+      });
+    </script>
   </body>
 </html>

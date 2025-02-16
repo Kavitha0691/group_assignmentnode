@@ -3,7 +3,7 @@
     <% allAnimals.forEach(animal => {
       const href = `/${animal.group.toLowerCase()}/${animal.slug}`;
       %>
-      <a href='<%= href %>' class="sidebar-btn">
+      <a href='<%= href %>' class="sidebar-btn" data-animal-details="<%= JSON.stringify(animal) %>">
         <%= animal.name %>
       </a>
     <% }) %>
