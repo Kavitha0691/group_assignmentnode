@@ -1,6 +1,7 @@
 import express from 'express';
-import * as path from 'path';
 import dotenv from "dotenv";
+import * as path from "path";
+import reptilesRouter from "./routes/reptiles.js";
 import { allAnimals } from "./data/animals.js";
 import birdsRouter from './routes/birds.js';
 
@@ -18,7 +19,7 @@ app.get("/", (req, res) => {
 });
 //Routing Here
 app.use("/birds",birdsRouter);
-
+app.use ("/reptiles", reptilesRouter);
 //Setup
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
